@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radisson Blu</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./manifest.json">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="./book.css" type="text/css">
+</head>
+<body>
+    <header id="header"> 
+        <!--Navigation Bar-->
+        <a href="./home page.html"><img class="logo" src="./Radisson-Logo-640x403.png" alt="picture of the logo"></a>
+    
+        <section class="navbar" id="myNavbar">
+          <ul>
+             <li>
+            <a href="./home page.html">home</a> 
+            <a href="./offer page.html">offers</a>
+            <a href="./restaurents page.html">restaurants</a>
+            <a href="./adven page.html">adventures</a>
+            <a href="./gallery page.html">gallery</a>
+            <a href="./branch page.html">branches</a>
+            <a href="./rooms page.html">rooms</a>
+            <a href="./booknow page.html">BOOK NOW!</a>
+        
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                &#9776; </a>
+            </li>
+          </ul>
+        </section>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myNavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+        </script>
+
+</header>
+    <h1>welcome to radison blu</h1>
+
+    <h2>"Unlock the door to luxury <br>and book your stay where Wildest Dreams come true. </h2>
+<br> <br>
+   
+<section>
+          <section id="guestDetails">
+            <h2>Guest details</h2>
+            <label for="name">Name:</label>
+            <input class="guestinfo"  type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input class="guestinfo"  type="email" id="email" name="email" required>
+            
+            <label >select hotel branch</label>
+            <select class="guestinfo"  class="input-box" name="branch" id="branch">
+                <option value="kandy">Kandy</option>
+                <option value="colombo">Colombo</option>
+                <option value="galle">Galle</option>
+            </select>
+
+          </section><br> <br>
+<!-------------------------------------------------current booking ------------------------------------>
+          <section id="summary-box">
+      
+                <fieldset>
+                <table id="reservationTable">
+                    <tr class="bookingsummary">
+                      <h4>current cost</h4>
+                      <th>Item</th>
+                      <th>Cost</th>
+                    </tr>
+                    <tr>
+                      <td class="totalcostbox">Single Rooms</td>
+                      <td id="singleRoomCost" class="totalcostbox"><p id="singleCost">RS0.00</p></td>
+                    </tr>
+                    <tr>
+                      <td class="totalcostbox">Double Room</td>
+                      <td id="doubleRoomCost" class="totalcostbox"><p id="doubleCost">RS0.00</p></td>
+                    </tr>
+                    <tr>
+                      <tr>
+                        <td class="totalcostbox">Triple Room</td>
+                        <td id="tripleRoomCost" class="totalcostbox"><p id="tripleCost">RS0.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="totalcostbox">Cost of Extra Beds</td>
+                        <td id="extraRoomCost" class="totalcostbox"><p id="extraBedCost">RS0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="totalcostbox">Cost for Kids above 5 years</td>
+                      <td id="Above5KidsCost" class="totalcostbox"><p id="above5Cost">RS0.00</p>
+                      </td>
+                  </tr>
+                       
+                  <tr>
+                    <td class="totalcostbox">WiFi</td>
+                    <td id="wifiCost" class="totalcostbox"><p id="wifineed">Wifi Not Selected</p></td>
+                  </tr>
+            
+                  
+                  <tr>
+                    <td class="totalcostbox">Room View</td>
+                    <td id="roomViewCost" class="totalcostbox"><p id="selectedView">View Not Selected</p></td>
+                  </tr>
+            
+                  <tr>
+                    <td class="totalcostbox">Promo Code</td>
+                    <td id="promoC" class="totalcostbox"><p id="promoCodeId">Promo Code Not entered</p></td>
+                  </tr>
+
+                  <tr>
+                    <td class="totalcostbox">Total Cost</td>
+                    <td id="totalRoomCost" class="totalcostbox"><p id="totalCost">RS0.00</p></td>
+                  </tr>
+                     
+                </table>
+                </fieldset>
+                <button id="loyalty-btn" type="submit">Loyalty Points</button> 
+                <button id="favourite-button" type="submit">Add To Favourites</button> 
+                
+
+              </section>
+       
+<!----------------------------------------------------------------room booking-------------------------------------------------------->
+        <section>
+          <form method="post" id="roomBookingForm">
+          <h2>Room Booking!</h2>
+            <h3>select date</h3>
+            <section id="daysInput">
+            <label class="pick-date" for="checkInDate">Check-in Date:</label>
+            <input class="input-box" type="date" id="checkInDate" name="checkInDate" required>
+
+            <label class="pick-date" for="checkOutDate">Check-out Date:</label>
+            <input class="input-box" type="date" id="checkOutDate" name="checkOutDate" required>
+ 
+
+            <h3>select room type:</h3>
+            <section id="roomType">
+            <label for="singleroom">single room</label>
+            <input type="number" id="singleroom" name="room-type" value="single" min="1">
+            
+            <label for="doubleroom">double room</label>
+            <input type="number" id="doubleroom" name="room-type" value="double" min="1">
+
+            <label for="tripleroom">triple room</label>
+            <input type="number" id="tripleroom" name="room-type" value="triple" min="1">
+           </section>
+
+            <h3>No. of kids above Five</h3>
+            <input type="number" id="kidsabovefive" name="abovefive">
+
+            <h3>Extra Requirements:</h3>
+            
+            <input type="checkbox" name="extraReq" id="wifi">
+            <label for="wifi"> WI-FI </label> <br>
+            <label for="extrabed">Extra Bed</label>
+            <input type="number" name="extraReq" id="extrabed"> 
+
+            <h3>Preferred view: </h3>
+            <input type="radio" id="pool" name="view" value="pool">
+            <label for="pool" id="poolview">Pool View</label> 
+    
+            <input type="radio" id="garden" name="view" value="garden">
+            <label for="garden" id="gardenview">Garden View</label>
+
+        <br><br>
+             <label for="pcode">enter promo code:</label>
+             <input type="text" id="promo-code" name="p-code">
+<br> <br>
+        </form>
+        <button id="book-now" type="">Book Now</button> 
+   </section>
+   
+</section>
+<br> <br>
+<section id="allcostBox">
+  <h3>lotalty points</h3>
+<p id="loyalpoints">To earn lotalty points book more than 3 rooms</p></fieldset>
+</section>
+
+  <!-------------------------overall booking room--------------------------->
+
+  <table id="summaryTable">
+    <thead>
+        <tr> <th>Room Cost</th>
+            <th>Extra Bed cost</th>
+            <th>Additional Cost for Kids Above 5</th>
+            <th>Discount</th>
+            <th>Total Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+  </table>
+
+  <br> <br>
+
+<!-------------------------adventure booking form part-------------------------->
+<!------------------------current booking---------------------------------------------------------------------------------------->
+<section id="summary-box">
+  <section class="output">
+      
+      <table id="reservationTable">
+          <tr class="bookingsummary">
+            <h4>current cost</h4>
+            <th>Item</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td class="adve-selected">Adventure </td>
+            <td id="adventureSelect" class="adve-selected"><p id="adven-display">adventure will be displayed </p></td>
+          </tr>
+
+          
+          <tr>
+            <td class="adve-selected">cost for adults</td>
+            <td id="CostAdult" class="adve-selected"><p id="adultscost">RS0.00</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="adve-selected">cost for kids </td>
+            <td id="CostKids" class="adve-selected"><p id="kidscost">RS0.00</p>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="adve-selected">addtional cost for guide</td>
+            <td id="guideneed" class="adve-selected"><p id="guidecost">RS0.00</p>
+            </td>
+          </tr> 
+          
+          <tr>
+            <td class="adve-selected">Duration</td>
+            <td id="hours" class="adve-selected"><p id="durationCost">hour(s)</p>
+            </td>
+          </tr>
+
+        <tr>
+            <td class="adve-selected">Total Cost</td>
+            <td id="total-adven-Cost" class="adve-selected"><p id="AdventuretotalCost">RS0.00</p></td>
+          </tr>
+    
+      </table>
+      <button id="adven-favourite-button"type="submit">Add To Favourites</button> 
+                
+    
+       
+           </form>
+           </section>
+   </section>
+
+
+<!----------info booking page------------------------>
+
+
+  <section id="date-box">
+
+      <form action="" method="post" id="adventureBookingForm">
+        <h2> <small>BOOK YOUR ADVENTURE!</small></h2> <br>
+          <h3>select date</h3>
+          <label for="check-in">Date:</label>
+          <input type="date" id="adventurecheck-in" name="check-in" required> <br>
+
+          <label for="duration">Select Duration (hours):</label>
+          <select id="duration">
+          <option value="1">1 hour</option>
+          <option value="2">2 hours</option>
+          <option value="3">3 hours</option>
+          <option value="4">4 hours</option>
+          </select>
+
+          <h3>Select Activity</h3>
+           <select id="activity" name="activity" required>
+               <option class="adventuretype" value="sunset cruises">sunset cruises</option>
+               <option class="adventuretype" value="Whale watching">Whale watching</option>
+               <option class="adventuretype" value="diving">Diving</option>
+           </select> 
+           
+          <h3>Select Nationality: </h3>
+          <input type="radio" name="nation" id="localCitizen">
+          <label id="Local">Local Citizen</label> 
+  
+          <input type="radio" name="nation" id="foreignCitizen">
+          <label id="Foreign"> Foreign Citizen</label>
+
+          <h3> number of guests: </h3>
+       
+          <label for="guest-number"> adults:</label>
+          <input type="number" name="guest-number" id="guest-adults" min="1" max="6"> <br>
+
+          <label for="guest-number"> kids:</label> 
+          <input type="number" name="guest-number" id="guest-kids" min="1" max="6"> <br>
+
+
+           <h3>Need for a guide?: </h3>
+           
+           <input type="radio" id="yes" name="guide">
+           <label id="guide-no">yes</label> 
+           
+           <input type="radio" id="no" name="guide"> 
+           <label id="guide-yes">no</label><br> 
+
+           <button id="adventure-book-now" type="submit">Book Adventure</button>
+               </section>      
+        
+<br> <br> <br>
+<!-----------------------------footer part----------------------------------------->
+<footer>
+  <section id="footersection">
+      <section id="contact-info">
+          <h4>contact Radission hotel</h4>
+          <p>+94 912 030 500</p>
+          <p>info.galle@radissonblu.com</p>
+          <p>523C, Colombo Road, Gintota, Galle,80280,Sri Lanka</p>
+
+          <button > 
+            <a href="./faq.htm">for more help </a>
+        </button>
+    </section>
+    <br> <br>
+
+    <section class="footer-social">
+        <h4>Follow Us</h4> <br>
+        <a href="./download.htm">Instagram |</a>
+        <a href="./download (1).htm">Facebook | </a>
+        <a href="./radissonhotelgroup.htm">Youtube</a> 
+    </section>
+
+    <br> <br>
+
+    <section class="footer-social">
+        <h4>Follow Us</h4> <br>
+        <a href="./download.htm">Instagram |</a>
+        <a href="./download (1).htm">Facebook | </a>
+        <a href="./radissonhotelgroup.htm">Youtube</a> 
+    </section>
+<section class="footer-copyright">
+                 <p>&copy; 2023 radisson blu. All rights reserved.</p>
+            </section>
+    </section>
+
+</footer>
+
+
+
+  
+
+
+    <script src="./bookin.js"></script>
+    
+</body>
+</html>
+
